@@ -7,21 +7,25 @@ public class BinaryTree {
 
     public void addNode(int val) {
         TreeNode node = new TreeNode(val);
+        TreeNode x = root;
+        TreeNode y = null;
 
-        if (root == null) {
-            root = node;
-        } else {
-            while(true) {
+        while (x != null) {
+            y = x;
 
-            }
-
+            if (val < x.val) x = x.left;
+            else x = x.right;
         }
+
+        if (y == null) root = node;
+        else if (val < y.val) y.left = node;
+        else y.right = node;
     }
 
     class TreeNode {
         int val;
-        TreeNode left;
-        TreeNode right;
+        TreeNode left = null;
+        TreeNode right = null;
         TreeNode(int x) { val = x; }
     }
 }
