@@ -23,15 +23,7 @@ public class Solution {
 
         BinaryTree.TreeNode x = root;
         while (!nodesStack.empty()) {
-            if (x.left != null) {
-                nodesStack.push(x);
-            } else if (x.right != null) {
 
-            }
         }
-
-
-
-
     }
 }
